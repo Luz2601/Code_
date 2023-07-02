@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DOM Projects</title>
+        <style>
+             /*
+                with body element any and every changes are shown on entire page 
+                space on outside on element is called margin
+            */
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+
+
+            /*
+                button{} is a css slector .butcsssub means insted of styling a button 
+                we will style a class
+                check website code for mod=re info  
+                in css space inside an element is called padding
+                px means pixels  
+                font weight makes the font bold
+                
+            */
+            .butcsssub{
+                border : none;
+                background-color: black;
+                color: white;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                padding-left: 15px;
+                padding-right: 15px;
+                font-weight: bold;
+                border-radius: 50px;
+                cursor: pointer;
+                margin-bottom: 30px;
+
+
+            }
+            
+            .issubed{
+                background-color: rgb(240, 240, 240);
+                /*
+                    this is an rbg value 
+                    rgb works on additive colour systen 
+                    each value goes from 0 to 255
+                    0 means less colour darker
+                    255 means more colour lighter 
+                */
+                color: black;
+            }
+
+            .costinput {
+                font-size: 15px;
+                /*
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                    these 4 lines can be summerised into 1
+                    padding add space in multiple directions
+                    if we give 2 values to padding with space 1st corresponds to vertical padding
+                    2nd value corresponds to horizontal padding
+                */
+                padding: 10px;
+
+            }
+
+            .cal{
+                background-color: green;
+                color: white;
+                border: none;
+                padding: 12px 50px;
+                font-size: 15px;
+                cursor: pointer;
+                
+
+
+            }
+
+           
+
+
+
+
+
+        </style>
+    </head>
+    <body>
+        <p>You Tube Subscribe Button</p>
+        <!--when ever we use onclick js scripts run when we interact with 
+        the element with mouse to use enter we can use onkeydown="___"check inpput -->
+        <button onclick="
+            sub ();"  class="js-sub butcsssub">Subscribe</button>
+
+            <p>Shipping Calculator</p>
+
+            <!--we fisrt need to check that the key pressed is enter key-->
+            <input placeholder="Cost of Order" class="jsinput costinput" onkeydown="if (event.key === 'Enter'){calcu();}">
+
+
+
+        
+
+            <!--clicks and keydowns are known as events 
+            on clicks and on keydowns are known as event listners -->
+
+            <!--theres a window function 
+                window represents entire chrome window 
+                window contains the webpage thus window contains the very same documnet object 
+                console is also the part of browser 
+                -->
+            <button onclick="
+            calcu();" class="cal">Calculator</button>
+            <P class="jscost"></P>
+
+            <!--few egs of event listeners
+            onclick
+            onkeydown
+            onscrool
+            onmouseenter
+            onmouseleave-->
+
+            
+
+
+
+        <script>
+            /*
+                Process for js 
+                figure out the steps aka algorithm 
+                we can use innerTEXT in place of innerHTML also
+                a value from dom is alwayes a string
+                .classlist gives us controle of the class attribute
+                .add is a method 
+                a nethod is a function inside an object
+            */
+           function sub () {
+            const but = document.querySelector('.js-sub'); 
+            
+            if (but.innerHTML === 'Subscribe') {
+                but.innerHTML = 'Subscribed !!';
+                // adds another class
+                but.classList.add('issubed')
+            } else {
+                but.innerHTML= 'subscribe';
+                but.classList.remove('issubed')
+            }
+
+           }
+           function calcu (){
+           let inputElement = document.querySelector('.jsinput');
+           let cost = Number (inputElement.value);
+           
+           
+           if (cost < 40){
+            cost =cost +10;
+           }
+           document.querySelector('.jscost').innerHTML = `Rs.${cost}`;
+
+           }
+        </script>
+    </body>
+</html>

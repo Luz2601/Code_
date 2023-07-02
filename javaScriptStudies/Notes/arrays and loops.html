@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Arrays and loops</title>
+        <script>
+            // this is an array they represent a list of numbers thery also function as an value
+            const myArray = [10,20,30];
+            console.log(myArray);
+
+            // this is called indexing in arrays here 0 is the 1st value 
+            console.log(myArray[0]);
+            myArray[0] = 99;
+            console.log(myArray[0]);
+
+            let a = [1, 'hello', true,{name:'socks'}]
+
+            console.log(typeof[1,2])
+            // its a special type of obj
+            console.log(Array.isArray(a))
+            // because arrays are a type of obj we can also use properties and methods 
+
+            myArray.push(100);
+            console.log(myArray);
+
+            // splice contains 2 values is is index second is no of values removed 
+            myArray.splice(0,1)
+            console.log(myArray)
+
+            // loops
+
+            let i = 1;
+            while (i <=5 ) {
+                console.log(i);
+                i = i + 1 ;
+            }
+            /*
+                1st we create a variable 1 and make it equal to 1 
+                withen while statement until value in () is true 
+                computer will continue to run the code in {} over and over again
+                (): loop condition 
+                {}: loop body
+                i: loop variable 
+                'i = i + 1' || i += 1 || i ++: incriment step, without this loop dosent end 
+                 everytime we run this loop and value of i changes this is called an itteration 
+                
+                 loops create a scope 
+
+                there are 2 types of loops 
+                while & for 
+
+                in for (let i = 1; 'loop variable'
+                        i <= 5; 'loop condition'
+                        i++ 'incriment step' 
+                        )
+                While vs for
+                if were doing a std loop use for its more organized and shorter
+
+                if its a non std loop use while loop 
+                while loops a re more flexible
+
+            */
+           for (let i = 1; i <= 5; i++) {
+            console.log(i);
+            }
+
+            // a not std loop 
+            // generate a random no until it gets 0.5
+
+            let randomNumber = 0;
+            while (randomNumber < 0.5) {
+                randomNumber = Math.random();
+            }
+
+            console.log(randomNumber);
+
+            /*
+                looping through an array 
+                we can replace index <= todo.length-1; by index < todo.length; the output is same 
+            */
+           const todo = [
+            'sketch',  // index 0
+            'food',  // index 1
+            'nails'         // index 2
+           ]
+            
+           for (let index = 0; index <= todo.length-1; index++) {
+            const value = todo[index];
+            console.log(value);
+           }
+           /*Accumlator pattern 
+           say we have an aray of numbers calculate sum of all numbers
+           stem 1 create a variable to store the result
+           step 2 loop through the array and store the updated result 
+           */
+          const nums = [1,1,3,4];
+          let total = 0;
+
+          for (let i = 0; i < nums.length; i++) {
+            const num = nums[i];
+            total = total + num;
+          }
+
+          console.log(total);
+        
+          // details:
+          // total is 0 
+          // 1st incriment i === 0 ie i < 4 and num = num[i] therefoe num = 1 then total = total + num ie 0 = 0 + 1 hence total = 1
+          // 2nd incriment i === 1 ie i < 4 ana num = num[i] therefoe num = 1 then total = total + num ie 1 = 1 + 1 hence total = 2
+          // 3rd incriment i === 2 ir i < 4 and num = num[i] therefoe num = 3 then total = total + num ie 2 = 2 + 3 hence total = 5
+          // 4th incrimnet i === 3 ie i < 4 and num = num[i] therefoe num = 4 then total = total = num ie 5 = 5 + 4 hence total = 9
+          // 5th incriment i === 4 because now i < 4 is false hence the loop breaks and total value is 9 
+
+          // say we have to create a diff array with same elements but values are doubled 
+          let multiple = 0;
+          let newNums = [];
+          for (let i = 0; i < nums.length; i++) {
+            const num = nums[i];
+            multiple = num * 2;
+            newNums.push(multiple);
+        }
+          console.log(newNums);
+
+        /*
+        arrays are refrances just like objects 
+        ie array1 contains a refrence about the positioned values withen the list 
+        array1 dose not contain values 1,2,3 but a refrence in memoary
+        */
+
+        const array1 = [1,2,3];
+        const array2 = array1;
+        // this dose not mean that array2 also has 1,2,3 it means that array 1 and 2 both refer to same memory address for looking up at the list containing 1,2,3 
+
+        array2.push(4);
+        console.log(array1);
+
+        // in this situation array 2 is considered as a shallow copy of array 1 
+
+        const array3 = array1.slice();
+        // slice fx takes values withen the list one by one and appends them in array3  thus creating a true copy of array one 
+
+        // DESTRUCTING 
+        const [firstValue, secondValue] = [1,2,3];
+        // to remove a value fron an array we used splice() funcion we 1st mentioned index no then the no of values 
+        // a better way to extract information is const [firstValue, secondValue] = [1,2,3]; this statement compairs 2 arrayr one with variables another with values and assing then respectively accourding to indexing
+        // thus firstValue has 1 and secondValue has 2 and value array is left wih a 3 say '[3]'
+
+        //more details on LOOPS 
+        // this loop runs and prints numbers until it reaches 10 say we wanna stop it on 8th 
+        for (let i = 1; i<= 10;i++){
+            console.log(i);
+            if (i === 8) {
+                break;
+            }
+        } 
+        // break exits the loop 
+        // say we wanna skip no 3 
+        for (let i = 1; i<= 10;i++){
+            console.log(i);
+            if (i === 3) {
+                continue;
+            }
+            if (i === 8) {
+                break;
+            }
+        } 
+
+        // % is the remainder operator 
+
+        // a loop that prints numbers only divisible by 3 
+
+        console.log('divisible by 3')
+        
+        for (i = 1; i <= 10; i++) {
+            if (i % 3 === 0) {
+                console.log(i);
+            } else {continue;}
+        }
+
+
+        
+
+
+
+        </script>
+    </body>
+</html>

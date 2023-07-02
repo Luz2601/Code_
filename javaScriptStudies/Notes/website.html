@@ -1,0 +1,54 @@
+<!DOCTYPE html><!--this is not an element ist a code specifying to use a modern verson of html-->
+<html>
+    <!--this basically contains the entire webpage-->
+    <head>
+        <!--head contains info about the page in genral everything that is not visible goes inside the head-->
+        <!--style element is unique it dosenot appear on webpage we write css code in it -->
+        <!--button{}is a css code and this tells the comp to change the apperance of all the buttons on the page -->
+        <!--button is replaced by a class aka red-button-->
+        <title>
+            HTML CSS Rev
+        </title>
+        <style>
+        .red-button {
+            background-color: red;
+            color: white;
+            border: none;
+        }
+        .yellow-button {
+            background-color: yellow;
+            border: none;
+            }
+</style>
+    </head>
+    <body>
+        <!--body element is suppose to contain everything visible on page-->
+        <!-- this code tells the comp to create a button -->
+        <button title="tooltip" class="red-button" onclick="
+            alert('good JOb!');
+         ">
+            Hello
+        </button> 
+        <!--this code creates a paragraph-->
+        <p>
+            Paragraph of <button class="yellow-button">Hello</button> text 
+        </p>
+        <!--with an element inside another element this is called nesting-->
+        <!--ih ntml multiple spaces are combined into a single space in web page & same goes for new line if we press enter in this paragraph a new line dose not appear on webpage-->
+
+
+        <!--like style element adds and runs css code script element adds and runs javascript code-->
+
+        <script>
+            // here we can add javascript code thus using // for comments not <!--...-->
+            alert("hello");
+            /*
+                though this also is not entirely visible we place js in body because we want eo first load the webpage them make it interactive 
+                we can run js by another way vis attributes check 1st button {onclick attribute}
+                onclick script is conditional and runs only when engaged 
+            */
+           console.log(2+2);
+
+        </script>
+    </body>
+</html>

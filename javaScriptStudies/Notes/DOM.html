@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DOM</title>
+
+        <style></style>
+    </head>
+    <body>
+        <button>hello</button>
+        <button class ="js">second button</button>
+        <script>
+            /*
+                DOM is a bulit in object aka document object model 
+                document.body.innerHTML is a sub fx from document built in object. when run it delets everything from the html ade replaces it with its value 
+                this code works on dot notation 
+                document is an object and document.body means we are accessing body from documnet
+                now body initselve is an object thus body.innerHTML 
+                so in theory we actually changes the value of innetHTML that belonged to body and bpdy belonged to document 
+                document is linked with webpage
+                documnet object represents or model the webpage 
+
+                document.title gets webpage body 
+                document.body gets entire body of webpage
+                {we can have html elements in js it gives html controle to js}
+
+                documnet.querySlector('string{what to get from page}'); lets us get any element form page and puts it into js
+
+                if we replace stroing with button it will get the 1st button element from page
+                if we replace body it will get 1st body element from the page
+
+                everyhtml emelent has .innerHTML property thus  documnet.querySlector('button').innerHTML; shows iner html of 1st button
+
+                documnet.querySlector('.js'); when string starts from . it means the compiler looks for class nor the name 
+
+                this is called a class slector also used in
+                css to style elements of a specific class 
+
+                DOM combines js and html 
+
+
+                theres a window function 
+                window represents entire chrome window 
+                window contains the webpage thus window contains the very same documnet object 
+                console is also the part of browser 
+                
+
+
+
+            */
+           // document.body.innerHTML = 'hello';
+           // document.title = 'good job';
+           document.querySlector('button');
+           documnet.querySlector('button')
+            .innerHTML;
+            documnet.querySlector('.js');
+
+
+
+        </script>
+    </body>
+</html>

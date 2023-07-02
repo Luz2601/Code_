@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DOM Projects</title>
+        <style></style>
+    </head>
+    <body>
+        <p>Youtube Subscribe Button</p>
+        <!--when ever we use onclick js scripts run when we interact with 
+        the element with mouse to use enter we can use onkeydown="___"check inpput -->
+        <button onclick="
+            sub ();"  class="js-sub">Subscribe</button>
+
+            <p>Shipping Calculator</p>
+
+            <!--we fisrt need to check that the key pressed is enter key-->
+            <input placeholder="Cost of Order" class="jsinput" onkeydown="if (event.key === 'Enter'){calcu();}">
+
+            <!--clicks and keydowns are known as events 
+            on clicks and on keydowns are known as event listners -->
+
+            <!--theres a window function 
+                window represents entire chrome window 
+                window contains the webpage thus window contains the very same documnet object 
+                console is also the part of browser 
+                -->
+            <button onclick="
+            calcu();">Calculator</button>
+            <P class="jscost"></P>
+
+            <!--few egs of event listeners
+            onclick
+            onkeydown
+            onscrool
+            onmouseenter
+            onmouseleave-->
+
+            
+
+
+
+        <script>
+            /*
+                Process for js 
+                figure out the steps aka algorithm 
+                we can use innerTEXT in place of innerHTML also
+                a value from dom is alwayes a string
+            */
+           function sub () {
+            const but = document.querySelector('.js-sub'); 
+            
+            if (but.innerHTML === 'Subscribe') {
+                but.innerHTML = 'Subscribed';
+            } else {
+                but.innerHTML= 'subscribe';
+            }
+
+           }
+           function calcu (){
+           let inputElement = document.querySelector('.jsinput');
+           let cost = Number (inputElement.value);
+           
+           
+           if (cost < 40){
+            cost =cost +10;
+           }
+           document.querySelector('.jscost').innerHTML = `Rs.${cost}`;
+
+           }
+        </script>
+    </body>
+</html>

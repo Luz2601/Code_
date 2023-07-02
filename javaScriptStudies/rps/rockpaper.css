@@ -1,0 +1,50 @@
+
+body {
+    background-color: rgb(25, 25, 25);
+    color: white;
+    font-family: Arial, Helvetica, serif;
+
+}
+.cssp{
+    font-size: 30px;
+    font-weight: bold;
+    
+
+}
+.icon{
+    height: 50px;
+}
+.but{
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 60px;
+    width: 120px;
+    height: 120px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.cssg{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.cssg1{
+    font-size: 20px;
+    font-weight: bold;
+}
+.cssg2{
+    font-size: 16px;
+    font-weight: bold;
+}
+.butt{
+    background-color: rgb(42, 42, 42);
+    border: 2px solid white;
+    border-radius: 60px;
+    height: 50px;
+    width: 380px;
+    color: white;
+    cursor: pointer;
+
+}
+
+

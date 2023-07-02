@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Rock_Paper_Scissors</title>
+        <link rel="stylesheet"
+         href="rockpaper.css">
+         <!--link is aslo a void element rel means what type of file we r linking stylesheet defines css
+        href means where the file is similar to src-->
+    </head>
+    <body>
+        <p class="cssp">
+            __Rock_Paper_Scissors__
+        </p>
+        
+        <button onclick="playGame('rock');" class="but">
+            <img src="rock-emoji.png" class="icon">
+        </button>
+
+
+        <button onclick="playGame('paper');" class="but">
+            <img src="paper-emoji.png" class="icon">
+        </button>
+
+
+        <button onclick="playGame('scissors')" class="but">
+            <img src="scissors-emoji.png" class="icon">
+        </button>
+
+
+        <p class="skl cssg"></p>
+
+        <p class="sk cssg"></p>  
+
+        <p class="jsrps cssg2"></p>
+
+        <button onclick="reset ();" class="butt">reset game</button>
+        
+        <script src="rock-paper-scissors.js">
+            <!--we can use multiple scripts elements to include multiple scripts -->
+
+        </script>
+    </body>
+</html>

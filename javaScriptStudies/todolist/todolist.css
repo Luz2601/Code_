@@ -1,0 +1,69 @@
+body{
+    background-color: rgb(235, 225, 243);
+    color: black;
+    align-items: center;
+    
+.css-input{
+    font-family: Arial, Helvetica, sans-serif;
+    border: solid 3px;
+    background-color: rgb(160, 219, 199);
+    color: white;
+    padding: 5px;
+    width: 145px;
+    height: 20px;
+    text-align: center;
+
+}
+.css-tit{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+    
+    
+
+}
+.css-add{
+    font-family: Arial, Helvetica, sans-serif;
+    border: solid 3px;
+    background-color: rgb(160, 219, 199);
+    color: white;
+    padding: 5px;
+    width: 70px;
+    height: 35px;
+    cursor: pointer;
+
+}
+.css-del{
+    font-family: Arial, Helvetica, sans-serif;
+    border: none ;
+    background-color: rgb(250, 81, 81);
+    color: black;
+    font-weight: bold;
+    width: 55px;
+    margin: 1.5px;
+    height: 25px;
+    cursor: pointer;
+
+
+}
+.css-res{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    border: solid 3px;
+    background-color: rgb(97, 133, 121);
+    color: white;
+    padding: 5px;
+    width: 400px;
+    height: 35px;
+    margin-top: 10px;
+
+}
+.css-txt{
+    font-family: Arial, Helvetica, sans-serif;
+    display: grid;
+    grid-template-columns: 169px 155px 1px;
+    margin-top: 10px;
+    column-gap: 5px;
+    row-gap: 2px;
+    align-items: center;
+}

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Booleans</title>
+
+        <style>
+
+        </style>
+    </head>
+    <body>
+        <script>
+            /* 
+                booleans have only 2 elemsnts:
+                true of false 
+                this or that
+                1 or 0 
+                in js Its enclosed to true of false only  
+
+                to create a boolean weire true of false
+                {Comparison Operators}
+                > greater than
+                < lesser than
+                >= greaterthan or equal to 
+                <= lesser than or equal to
+                === equal to (== also works but it tries to convert both values into same type)
+                !== not erual to 
+                comperasion operators have lower priority than maths 
+
+
+        
+
+            
+            */
+           console.log(3<5);
+           console.log(typeof true);
+           console.log(5 == "5.00");
+           // with == 5 and string5 are considered equal because this operator tries to convert the values into same type
+           console.log(5==="5.00");
+           // as === works as std equals to comparison operator thus no changes are made and the type remains intaact thus false
+
+           /*
+            if Statements
+            if statements act like gateway 
+            and are a good measure for constrains
+           */
+          if (false) {
+            console.log('hello');
+          } else {
+            console.log('else');
+          }
+          // if boolean value in () is true we'll run the code in {} if its false we will not run the code
+          // wlse works when the if code is bypassed 
+          const age = 15;
+
+          if (age >= 16) {
+            console.log('you can drive');
+          } else if (age >= 14) {
+            console.log('almost there');
+          } else {
+            console.log('you cannot drive');
+          }
+          /*
+            to create if statements we use if keyword ()contain boolena value and {} contail code to be executed
+            ()is called condition 
+            is condition is true code runs 
+            if we add else also ie optional and conditional boolean is false the else code will run 
+            {} are optional if only 1 line of code is there 
+            else if is a keyword thats lets us branch more options withen an if statemen
+          */
+
+          // Logical operators
+          console.log(true && true);
+          // and or not
+          // && || !
+          // logical operators have lower priorities than comparison operators
+          // and checks both statements are true
+          // or checks atlest one statement is true
+          // not flips the boolean value 
+          // in js list of falsy calues are false, 0, '', NaN, undefined and null rest all are truthy
+          // we use them as a shotcut
+          let cartQunatity = 5;
+          if (cartQunatity) {
+            console.log('cart has ' + cartQunatity +' product(s)');
+          } else {console.log('cart is empty');}
+          // in this situation because cart quantity is not 0 therefoe its truthy not falsy(0) an dhence if statement will run 
+          // try changing the number value 
+          // truthy and falsy aslo work ith logical operators 
+          // NaN stands for not a number say a string devided by number 
+          // its ans in nan
+          //undefined a value and a state given to a variable consider this 
+          let ch;
+          console.log(ch);
+          // it prints undefined 
+          let chr = undefined;
+          console.log(typeof chr);// prints undefined
+
+
+          /*
+            a few shoutcuts for if statements 
+            TERNARY OPERATOR
+            GAURD OPERATOR
+            DEFAULT OPERATOR 
+          */
+
+          const res = !0 ? 'truthy' : 'falsy'
+          // this a an eg of ERNARY OPERATOR consider ? as if branch and : as else branch 
+          //thus if blue true is true its truthy else blue true is falsy
+          // we can save a ternary operator in a variable 
+          console.log(res);
+          //if we replace true by 0 or any other falsy value she the changes 
+
+          // we know and operator && it checks if both sider are truthy 
+          /* say in condition false && value 2 if ist val is already false the code stops early code on right is not even interpreted this is called short circut evaluatio */
+          const message = false && 'hello';
+          console.log(message);
+          // operaor short circuts and the code dosent even run completly 
+          const mesg1 = 5 && 'hello';
+          console.log(mesg1);
+
+          // default operator 
+          // similar to gaurd operator but uses or (||)
+          // left side is already truthy 
+          const curency= undefined || 'Rs.';
+          // here chosing a curency is optional if we dont by default its indian rupee 
+          // left side is always truthy but here its undefined so the circut dosent break 
+          // ground shortcircts with left value default shortcircuts with right operator 
+          // because undefined is falsy hence code will continue forward and curancy value is Rs
+          // default operatos is shortcut for this type of if statement 
+          // if (!condition) {currency = 'Rs'};
+          
+
+
+
+
+
+
+
+            
+        </script>
+    </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Functions and objects</title>
+
+        <style></style>
+    </head>
+    <body>
+        <script>
+             /*
+                A function lets us reuse a code 
+                function creates a new function then we use a function 
+                () holdes the parameter 
+                we say this fx takes the parameter 
+                fx stops after return is inneteaded
+                 
+            */
+            function fx1() {
+                console.log('hello');
+                console.log(2+2);
+            }
+            fx1();
+            /*
+                OBJECTS
+                an object groups multiple values together 
+                unlike variables obj is defined by{} variables withen this code on left is  property values on right are values code and values are seperated by : and are seperated by ,  
+                they make our code organized 
+                
+
+
+            */
+           const product = {
+            name: 'socks',
+            price: 1090
+
+           };
+           console.log(product);
+           console.log(product.name); 
+           product.stock = true;
+           console.log(product);
+           delete product.stock;
+           console.log(product);
+           console.log(typeof product);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Advanced Fx.</title>
+        <script>
+            /*
+                functionx also behave like values 
+            */
+           const function1 = function Greeting() {
+                console.log(`hello`);
+
+           }
+           console.log(function1);
+           console.log(typeof function1);
+           // a fx is just another type of value 
+           function1();
+           // fx name is not mandatory as long as one has a way to access a fx 
+
+           const object1 = {
+            num: 2,
+            Fun: function greetings() {
+                console.log('hello3');
+            }
+           }
+           console.log(object1.Fun);
+
+           // a fx saved inside an object is called method 
+
+           function display(param){
+            console.log(param);
+           }
+           display(2);
+           
+           // built in functions...
+           setTimeout(function(){
+            console.log('timeout')
+         }, /*its a no in mili secs*/3000);
+
+         console.log('next line');
+         // the compiler dosent stops and wait for fx hence next line is displayed before timeout
+        </script>
+    </body>
+</html>

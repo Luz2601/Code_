@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exercise lesson 6</title>
+        <style></style>
+    </head>
+    <body>
+        <input placeholder="What Hour is it??" class="int" onkeydown="if (event.key ==='Enter'){disp(); res();}">
+        <p class="tx"></p>
+        <script>
+            let hour = document.querySelector('.int').value;
+            function disp() {
+                a = Number(hour);
+                console.log(typeof a);
+                if (a >= 6 && a <=12) 
+                {
+                    document.querySelector('.tx').innerHTML = 'Oh! Good Morning';
+                } 
+                else if (a >= 13 && a <=17) 
+                {
+                    document.querySelector('.tx').innerHTML = 'Good Afternoon';
+                } 
+                //else {document.querySelector('.tx').innerHTML = 'Good Night!';}
+            
+            }
+
+            function res(){
+                document.querySelector('.int').value = '';
+                setTimeout(function(){document.querySelector('.tx').innerHTML = ''}, 3000);
+                
+
+            }
+
+            
+
+        </script>
+    </body>
+</html>

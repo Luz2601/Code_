@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculator</title>
+        <style>
+            body{
+                background-color: rgb(31, 29, 29);
+                color: white;
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: bold;
+            }
+            .csstab{
+                padding: 7px;
+                padding-left: 2px;
+            }
+            .css-num{
+                background-color: rgb(138, 137, 137);
+                border: none;
+                border-radius: 100px;
+                padding: 10px;
+                padding-left: 15px;
+                padding-right: 15px;
+                margin: 2px;
+                font-size: 20px;
+                cursor: pointer;
+
+            }
+            .css-oop{
+                background-color: rgb(247, 123, 41);
+                border: none;
+                border-radius: 100px;
+                padding: 10px;
+                padding-left: 15px;
+                padding-right: 15px;
+                margin: 2px;
+                font-size: 20px;
+                cursor: pointer;
+            }
+            .eq1{
+                margin-left: 10px;
+                
+            }
+            .cssd{
+                padding: 10px;
+                padding-left: 18px;
+                padding-right: 18px;
+                margin-left: 2px;
+            }
+            .css-clr{
+                background-color: rgb(138, 137, 137);
+                border: none;
+                border-radius: 100px;
+                padding-left: 80px;
+                padding-right: 80px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                cursor: pointer;
+            }
+            .ggf{
+                font-size: 25px;
+                padding-right: 20px;
+            }
+            
+        </style>
+
+    </head>
+    <body>
+        <div class="csstab">
+
+            <p class="js-1">_</p>
+
+            <button onclick="calculation +='1'; 
+            console.log(calculation);
+            disp();" class="css-num">
+                1
+            </button>
+            
+            <button onclick="calculation +='2'; 
+            console.log(calculation);
+            disp();" class="css-num">
+                2
+            </button>
+
+            <button onclick="calculation +='3'; 
+            console.log(calculation);
+            disp();" class="css-num">
+                3
+            </button>
+
+            <button onclick="calculation +='+'; 
+            console.log(calculation);
+            disp();" class="css-oop">
+                +
+            </button>
+
+        </div>
+        <div class="csstab">
+
+            <button onclick="calculation +='4'; 
+            console.log(calculation);\
+            disp(); " class="css-num">
+                4
+            </button>
+            
+            <button onclick="calculation +='5'; 
+            console.log(calculation);
+            disp();" class="css-num">
+                5
+            </button>
+
+            <button onclick="calculation +='6'; 
+            console.log(calculation);
+            disp();" class="css-num">
+                6
+            </button>
+
+            <button onclick="calculation +='-'; 
+            console.log(calculation);
+            disp();" class="css-oop ggf">
+                -
+            </button>
+
+        </div>
+        <div class="csstab">
+
+            <button onclick="calculation +='7'; 
+            console.log(calculation);
+            disp();" class="css-num">
+                7
+            </button>
+            
+            <button onclick="calculation +='8'; 
+            console.log(calculation);
+            disp();" class="css-num">
+                8
+            </button>
+
+            <button onclick="calculation +='9'; 
+            console.log(calculation);
+            disp();" class="css-num">
+                9
+            </button>
+
+            <button onclick="calculation +='*'; 
+            console.log(calculation);
+            disp();" class="css-oop ggf">
+                *
+            </button>
+
+        </div>
+        <div class="csstab">
+
+            <button onclick="calculation +='0'; 
+            console.log(calculation);
+            disp();" class="css-num">
+                0
+            </button>
+            
+            <button onclick="calculation +='.'; 
+            console.log(calculation);
+            disp();" class="css-num eq1 cssd">
+                .
+            </button>
+
+            <button onclick="calculation +='/'; 
+            console.log(calculation);
+            disp();" class="css-num eq1 cssd">
+                /
+            </button>
+
+            <button onclick="calculation = eval(calculation);
+            console.log(calculation);
+            disp();" class="css-oop eq1 cssd">
+                =
+            </button>
+
+        </div>
+
+        <button onclick="calculation = '_';
+                disp(); " class="css-clr">
+            CLear
+        </button>
+        
+        <script>
+            let calculation = '';
+            function disp() {
+                document.querySelector('.js-1').innerHTML = `${calculation}`;
+
+            }
+            
+            
+
+        </script>
+    </body>
+</html>

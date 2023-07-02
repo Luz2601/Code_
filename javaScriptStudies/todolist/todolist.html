@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>To Do List</title>
+        <link rel="stylesheet" href="todolist.css">
+    </head>
+    <body>
+        <p class="css-tit">To-Do List</p>
+
+        <!--+++++++++++++++++++++++++++++++++++++++++=-->
+        
+        <input placeholder="Event Name"
+            class="js-input css-input"
+            onkeydown="if (event.key === 'Enter'){Addtodo();
+               render(); }
+            ">
+        
+        <!--+++++++++++++++++++++++++++++++++++++++++=-->
+
+        <input type="date" class="js-date css-input">
+        <!--input has diff types by default text -->
+
+        <!--+++++++++++++++++++++++++++++++++++++++++=-->
+
+        <button onclick="
+            Addtodo();render();" class="css-add">
+            Add
+        </button>
+
+        <!--+++++++++++++++++++++++++++++++++++++++++=-->
+        
+        <div class="js-paragraph css-txt"></div>
+        <!-- div is a container element it containe other elements even other divs its also a block element 
+        a paragraph adds extra space above and below that dive does not do  -->
+
+        <!--+++++++++++++++++++++++++++++++++++++++++=-->
+
+        <button onclick="res();" class="css-res">Reset</button>
+
+        <!--+++++++++++++++++++++++++++++++++++++++++=-->
+        <script src="todolist.js"></script>
+    </body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cart Quantity</title>
+    </head>
+    <body>
+        <p>Cart Quantity:</p>
+        <button onclick=
+        "
+            console.log(`Cart Quantity: ${cartQuantity}`);
+            // here `` are used to specify a diff type of strings in this with $ sign we can replace infirmation in {} with $
+            ">
+            Show Quantity
+        </button>
+        
+        <button onclick=
+        "
+            cartQuantity++;
+            // cartQuantity++ is a special shortcut to replace +=1 and cartQuantity = cartQuantity + 1;
+            // ++ adds 1 similarly -- substracts 1
+             
+        ">
+            Add to Cart
+        </button>
+
+        <button onclick=
+        "
+            //cartQuantity = cartQuantity + 2;
+            cartQuantity += 2;
+            //  cartQuantity = cartQuantity + 2 and cartQuantity +=2 are same 
+        ">
+            +2
+        </button>
+
+        <button onclick=
+        "
+            cartQuantity += 3; 
+            // this works with other operators also 
+        ">
+            +3
+        </button>
+
+        <button onclick=
+        "
+            cartQuantity += 4; 
+            // this works with other operators also 
+        ">
+            +4
+        </button>
+
+        <button onclick=
+        "
+            cartQuantity += 5; 
+            // this works with other operators also 
+        ">
+            +5
+        </button>
+
+        <button onclick=
+        "
+            cartQuantity -= 1; 
+            // this works with other operators also 
+        ">
+            Remove From Cart
+        </button>
+
+        <button onclick=
+        "
+            cartQuantity = 0; 
+            console.log('cart was reset'); 
+            console.log('cartQuantity: ' + cartQuantity); 
+        ">
+            Reset Crat
+        </button>
+        
+        <script>
+            let cartQuantity = 0;
+
+        </script>
+    </body>
+</html>
