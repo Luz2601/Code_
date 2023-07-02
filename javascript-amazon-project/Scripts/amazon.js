@@ -79,8 +79,9 @@ document.querySelectorAll('.js-addtocart')
                     quantity: 1
                 });
             }
+            
 
             
-            console.log(cart);
         });
     });
+
